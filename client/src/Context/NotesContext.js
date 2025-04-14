@@ -12,7 +12,7 @@ const NotesContext = ({ children }) => {
 
   const getGroups = useCallback(async () => { 
     try {
-      const response = await axios.get('http://127.0.0.1:4000/api/groups');
+      const response = await axios.get('https://notes-xhpq.onrender.com/api/groups');
       setGroups(response.data);
     } catch (error) {
       console.error('Error fetching groups:', error);
@@ -24,7 +24,7 @@ getGroups()
 
   const createGroup = async (name,color) => {
     try {
-      const response = await axios.post('http://localhost:4000/api/groups', { name , color });
+      const response = await axios.post('https://notes-xhpq.onrender.com/api/groups', { name , color });
       getGroups(); 
       setSelectedGroup(response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ getGroups()
 
   const deleteGroup = async(groupId) =>{
     try {
-      await axios.delete(`http://localhost:4000/api/groups/${groupId}`);
+      await axios.delete(`https://notes-xhpq.onrender.com/api/groups/${groupId}`);
       getGroups(); 
       setSelectedGroup(null); 
     } catch (error) {
@@ -47,7 +47,7 @@ getGroups()
   const getNotes = useCallback(async (groupId) => {
     if (groupId) {
       try {
-        const response = await axios.get(`http://localhost:4000/api/group?groupId=${groupId}`); 
+        const response = await axios.get(`https://notes-xhpq.onrender.com/api/group?groupId=${groupId}`); 
         setNotes(response.data);
         console.log("Notes state updated in context:", response.data);
       } catch (error) {
@@ -64,7 +64,7 @@ getGroups()
 
   const createNote = async (noteData) => {
     try {
-     const response= await axios.post('http://localhost:4000/api/notes',  noteData ); 
+     const response= await axios.post('https://notes-xhpq.onrender.com/api/notes',  noteData ); 
       setNotes([...notes, response.data]);
       console.log("Note created successfully:", response.data);
     } catch (error) {
