@@ -1,0 +1,300 @@
+.content{
+    width: 80vw;
+    height: 100vh;
+    background-color:#DAE5F5;
+}
+
+/* ---------------NAVBAR SECTION----------------- */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #001F8B;
+    gap: 90px;
+    position: relative;
+    height: 63px; 
+    color: white;
+    padding: 0 20px; 
+  }
+  
+  .nav { 
+    display: flex;
+    align-items: center;
+
+    gap: 20px; 
+  }
+  
+  .circle-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: large;
+    color: white;
+  }
+  
+  .nav-heading {
+    font-size: 1.2rem;
+    margin: 0; 
+  }
+  
+  .back-arrow-link {
+    color: white;
+    font-size: 1.2rem; 
+    margin-right: 20px; 
+  }
+  
+  .back-arrow-link i {
+    margin-right: 0; 
+  }
+  
+  .navbar .btn2 {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    position: absolute ;
+    left: 93%;
+ 
+  }
+/* ----------------CONTENT PART----------------- */
+.content-img{
+    position: relative; 
+    top: 20%;
+    line-height: 25px;
+}
+img{
+    height: 40vh;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 450px;
+}
+.content-heading{
+    font-size: xx-large;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.content-end{
+    margin-top: 120px;
+}
+.content-end:hover{
+    text-decoration:underline;
+cursor: pointer;
+}
+
+i{
+    font-size: small;
+    margin-right: 3px;
+}
+
+
+/* -----------------NOTES SECTION---------------- */
+
+
+
+.note-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 21.5vh;
+    position: relative;
+    top: 1.5%;
+    background-color: #16008B;
+    
+}
+
+.new-note-input{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: relative;
+    
+}
+  textarea{
+    width: 76vw;
+    height: 16vh;
+    font-size: larger;
+    text-align: start; 
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; 
+    position: absolute;
+    border-radius: 20px;
+    padding: 20px;
+position: relative;
+border: none;
+  }
+textarea:focus {
+    outline: none;
+  }
+
+::placeholder{
+position: absolute;
+top: 20%;
+font-size: large;
+  }
+.note-btn{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    font-size: xx-large;
+    background-color: transparent;
+    border: none;
+}
+.note-btn:not([disabled]) {
+    color: #001F8B;
+    cursor: pointer; 
+  }
+
+.note-btn[disabled] {
+    color: rgb(208, 204, 204);
+
+}
+
+.records {
+    width: 80vw;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    padding: 10px; 
+  }
+  
+  .records-main {
+    overflow-y: auto; 
+    height: 65vh; 
+    padding: 10px; 
+  }
+  
+  .record {
+    background-color: white; 
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-align: justify;
+  }
+  
+  .record h1 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .record p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+  .record .note-created-at{
+   position: relative;
+   left: 87%;
+margin-bottom: -2px;
+   font-size: 0.7rem;
+font-weight: 500;
+}
+
+
+
+/* -----------Background Image--------------- */
+.content-img{
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.content-end{
+position: absolute;
+bottom: -45%;
+}
+
+
+
+
+
+/* ----small screen------------ */
+  @media screen and (max-width: 1000px) {
+    .content {
+      width: 100%;
+      order: 2;
+    
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        flex-direction: row;
+        gap: 4px;
+        background-color: #001F8B;
+        height: 80px;
+        color: white;
+        width: 100vw;
+       
+    }
+    .navbar .btn2{
+        background-color: #001F8B; 
+        height: 40px;
+        width: 40px;
+        border: none;
+        border-radius: 50%;
+        color: #000;
+        font-size: large;
+        font-weight: bolder;
+        position: relative;
+        left: 30%;
+    }
+    .circle-name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: small;
+        color: white;
+        position: relative;
+        right: 8%;
+    }
+    
+    .back-arrow-link {
+        width: 20px;
+        height: 40px; 
+    }
+    .back-arrow-link i{  
+        background-color: transparent;
+        color: white;
+        font-size: large;
+    }
+        .nav-heading{
+            font-size: 20px;
+            position: relative;
+        right: 6%;
+        }
+    .note-container{
+        width: 100%;
+        position: relative;
+        top: 3%;
+  }
+  textarea{
+width: 90vw;
+  }    .records{
+        width: 100vw;
+    }
+
+    .record .note-created-at{
+        position: relative;
+        left: 66%;
+     margin-bottom: -2px;
+        font-size: 0.7rem;
+     font-weight: 500;
+     }
+  }
